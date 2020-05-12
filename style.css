@@ -1,6 +1,196 @@
-@media (min-width:320px) { /* smartphones, iPhone, portrait 480x320 phones */ }
-@media (min-width:481px) { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px) { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
-@media (min-width:961px) { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
-@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body,
+html {
+  overflow-x: hidden;
+}
+
+nav {
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 100%;
+}
+
+#checkbox-menu,
+.toggle {
+  display: none;
+}
+
+.menu {
+  align-items: center;
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.menu li a {
+  color: #000;
+  text-decoration: none;
+  align-self: center;
+  font-size: 13px;
+  padding: 10px 15px;
+  transition: background .2s linear;
+}
+
+.menu li a:hover {
+  background: #ffcc01;
+  border-radius: 3px;
+}
+
+.menu li a.logo {
+  margin-right: 240px;
+  font-size: 25px;
+}
+
+.menu li a.contacts {
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 765px) {
+  .toggle {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    width: 100%;
+    color: #000;
+    background: #ffcc01;
+    transition: all .1s linear;
+  }
+
+  .toggle:hover {
+    background: #d3a900;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 0;
+    transition: height .3s linear;
+  }
+
+  .menu li {
+    display: flex;
+    align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .menu li a {
+    width: 95%;
+    text-align: center;
+    align-self: center;
+    align-content: center;
+  }
+
+  .menu li a.logo {
+    margin-right: 0;
+    font-size: 21px;
+  }
+
+  .menu li a.contacts {
+    margin-right: 0;
+  }
+
+  #checkbox-menu:checked + label .touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all .7s linear;
+  }
+
+  #checkbox-menu:checked + label .touch {
+    height: 350px;
+  }
+}
+
+.body__text {
+  background: blue;
+  color: white;
+  text-align: center;
+  min-width: 280px;
+  max-width: 700px;
+  white-space: pre-line;
+}
+
+/* smartphones, iPhone, portrait 480x320 phones */
+
+@media (min-width: 320px) {
+  .body__title {
+    font-size: 20px;
+  }
+
+  .body__text {
+    font-size: 12px;
+  }
+}
+
+/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+
+@media (min-width: 481px) {
+  .body__title {
+    font-size: 30px;
+  }
+
+  .body__text {
+    font-size: 18px;
+  }
+}
+
+/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+@media (min-width: 641px) {
+  .body__title {
+    font-size: 40px;
+  }
+
+  .body__text {
+    font-size: 24px;
+  }
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+
+@media (min-width: 961px) {
+  .body__title {
+    font-size: 50px;
+  }
+
+  .body__text {
+    font-size: 30px;
+  }
+}
+
+/* big landscape tablets, laptops, and desktops */
+
+@media (min-width: 1025px) {
+  .body__title {
+    font-size: 60px;
+  }
+
+  .body__text {
+    font-size: 36px;
+  }
+}
+
+/* hi-res laptops and desktops */
+
+@media (min-width: 1281px) {
+  .body__title {
+    font-size: 70px;
+  }
+
+  .body__text {
+    font-size: 42px;
+  }
+}
