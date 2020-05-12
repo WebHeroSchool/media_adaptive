@@ -43,10 +43,12 @@ nav {
   background: #ffcc01;
   border-radius: 3px;
 }
+
 .menu li a.logo {
   margin-right: 240px;
   font-size: 25px;
 }
+
 .menu li a.contacts {
   margin-right: 100px;
 }
@@ -63,6 +65,7 @@ nav {
     background: #ffcc01;
     transition: all .1s linear;
   }
+
   .toggle:hover {
     background: #d3a900;
   }
@@ -108,7 +111,7 @@ nav {
 
   #checkbox-menu:checked + label .touch {
     height: 350px;
-  }  
+  }
 }
 
 .body__text {
